@@ -1,0 +1,128 @@
+{
+  "common": {
+    "login": "ലോഗിൻ",
+    "signup": "സൈൻ അപ്പ്",
+    "logout": "ലോഗൗട്ട്",
+    "cancel": "റദ്ദാക്കുക",
+    "save": "സേവ് ചെയ്യുക",
+    "edit": "എഡിറ്റ്",
+    "delete": "ഇല്ലാതാക്കുക",
+    "search": "തിരയുക",
+    "loading": "ലോഡിംഗ്...",
+    "submit": "സമർപ്പിക്കുക",
+    "close": "അടയ്ക്കുക",
+    "back": "തിരികെ",
+    "next": "അടുത്തത്",
+    "upload": "അപ്ലോഡ്",
+    "download": "ഡൗൺലോഡ്"
+  },
+  "nav": {
+    "home": "ഹോം",
+    "marketplace": "മാർക്കറ്റ്പ്ലേസ്",
+    "community": "കമ്മ്യൂണിറ്റി",
+    "resources": "വിഭവങ്ങൾ",
+    "dashboard": "ഡാഷ്ബോർഡ്",
+    "profile": "പ്രൊഫൈൽ"
+  },
+  "auth": {
+    "loginTitle": "IFC-യിൽ ലോഗിൻ ചെയ്യുക",
+    "signupTitle": "IFC-യിൽ ചേരുക",
+    "email": "ഇമെയിൽ",
+    "password": "പാസ്വേഡ്",
+    "confirmPassword": "പാസ്വേഡ് സ്ഥിരീകരിക്കുക",
+    "name": "പൂർണ്ണ നാമം",
+    "phone": "ഫോൺ നമ്പർ",
+    "role": "റോൾ തിരഞ്ഞെടുക്കുക",
+    "farmer": "കർഷകൻ",
+    "seller": "വിൽപ്പനക്കാരൻ/ഉപകരണ ഉടമ",
+    "agriOfficer": "കാർഷിക ഓഫീസർ",
+    "location": "സ്ഥലം",
+    "cropType": "പ്രധാന വിള തരം",
+    "farmSize": "കൃഷിഭൂമി വലുപ്പം (ഏക്കർ)",
+    "experience": "അനുഭവം (വർഷങ്ങൾ)",
+    "switchToLogin": "ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ? ലോഗിൻ ചെയ്യുക",
+    "switchToSignup": "അക്കൗണ്ട് ഇല്ലേ? സൈൻ അപ്പ് ചെയ്യുക",
+    "loginError": "തെറ്റായ യോഗ്യതകൾ",
+    "signupSuccess": "അക്കൗണ്ട് വിജയകരമായി സൃഷ്ടിച്ചു!"
+  },
+  "dashboard": {
+    "farmer": {
+      "title": "കർഷക ഡാഷ്ബോർഡ്",
+      "aiAdvisor": "AI ഉപദേശകൻ",
+      "marketplace": "മാർക്കറ്റ്പ്ലേസ്",
+      "loanCalculator": "ലോൺ കാൽക്കുലേറ്റർ",
+      "queryHistory": "ക്വറി ചരിത്രം",
+      "notifications": "അറിയിപ്പുകൾ",
+      "profile": "പ്രൊഫൈൽ",
+      "weather": "കാലാവസ്ഥ അപ്ഡേറ്റുകൾ",
+      "cropMonitoring": "വിള നിരീക്ഷണം"
+    },
+    "seller": {
+      "title": "വിൽപ്പനക്കാരൻ ഡാഷ്ബോർഡ്",
+      "addProduct": "ഉൽപ്പാദനം ചേർക്കുക",
+      "myListings": "എന്റെ ലിസ്റ്റിംഗുകൾ",
+      "salesAnalytics": "വിൽപ്പന വിശകലനം",
+      "orders": "ഓർഡറുകൾ",
+      "inventory": "ഇൻവെന്ററി"
+    },
+    "admin": {
+      "title": "അഡ്മിൻ ഡാഷ്ബോർഡ്",
+      "escalatedQueries": "എസ്കലേറ്റ് ചെയ്ത ക്വറികൾ",
+      "userManagement": "ഉപയോക്തൃ മാനേജ്മെന്റ്",
+      "systemAnalytics": "സിസ്റ്റം അനാലിറ്റിക്സ്",
+      "contentModeration": "ഉള്ളടക്ക മോഡറേഷൻ"
+    }
+  },
+  "aiChat": {
+    "placeholder": "കൃഷിയെ കുറിച്ച് എന്തെങ്കിലും ചോദിക്കുക...",
+    "voiceInput": "ശബ്ദ ഇൻപുട്ട്",
+    "imageUpload": "ചിത്രം അപ്ലോഡ് ചെയ്യുക",
+    "sendMessage": "സന്ദേശം അയയ്ക്കുക",
+    "listening": "കേൾക്കുന്നു...",
+    "processing": "നിങ്ങളുടെ ചോദ്യം പ്രോസസ്സ് ചെയ്യുന്നു...",
+    "escalateToExpert": "വിദഗ്ധനിലേക്ക് എസ്കലേറ്റ് ചെയ്യുക"
+  },
+  "marketplace": {
+    "title": "കാർഷിക മാർക്കറ്റ്പ്ലേസ്",
+    "categories": "വിഭാഗങ്ങൾ",
+    "filters": "ഫിൽട്ടറുകൾ",
+    "priceRange": "വില പരിധി",
+    "location": "സ്ഥലം",
+    "addToCart": "കാർട്ടിൽ ചേർക്കുക",
+    "buyNow": "ഇപ്പോൾ വാങ്ങുക",
+    "contactSeller": "വിൽപ്പനക്കാരനെ ബന്ധപ്പെടുക",
+    "equipment": "ഉപകരണങ്ങൾ",
+    "seeds": "വിത്തുകൾ",
+    "fertilizers": "വളങ്ങൾ",
+    "pesticides": "കീടനാശിനികൾ"
+  },
+  "loanCalculator": {
+    "title": "കാർഷിക ലോൺ കാൽക്കുലേറ്റർ",
+    "loanAmount": "ലോൺ തുക (₹)",
+    "interestRate": "പലിശ നിരക്ക് (%)",
+    "tenure": "കാലാവധി (വർഷങ്ങൾ)",
+    "monthlyEMI": "മാസിക EMI",
+    "totalInterest": "മൊത്തം പലിശ",
+    "totalAmount": "നൽകേണ്ട മൊത്തം തുക",
+    "calculate": "EMI കണക്കാക്കുക"
+  },
+  "community": {
+    "title": "കർഷക കമ്മ്യൂണിറ്റി ഫോറം",
+    "createPost": "പുതിയ പോസ്റ്റ് സൃഷ്ടിക്കുക",
+    "categories": "വിഭാഗങ്ങൾ",
+    "trending": "ട്രെൻഡിംഗ് വിഷയങ്ങൾ",
+    "recentPosts": "സമീപകാല പോസ്റ്റുകൾ",
+    "reply": "മറുപടി",
+    "like": "ലൈക്ക്",
+    "share": "പങ്കിടുക"
+  },
+  "resources": {
+    "title": "കാർഷിക വിഭവങ്ങൾ",
+    "articles": "ലേഖനങ്ങൾ",
+    "videos": "വീഡിയോകൾ",
+    "guides": "ഗൈഡുകൾ",
+    "weatherReports": "കാലാവസ്ഥ റിപ്പോർട്ടുകൾ",
+    "marketPrices": "മാർക്കറ്റ് വിലകൾ",
+    "governmentSchemes": "സർക്കാർ പദ്ധതികൾ"
+  }
+}

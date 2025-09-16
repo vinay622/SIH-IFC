@@ -1,0 +1,128 @@
+{
+  "common": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "nav": {
+    "home": "Home",
+    "marketplace": "Marketplace",
+    "community": "Community",
+    "resources": "Resources",
+    "dashboard": "Dashboard",
+    "profile": "Profile"
+  },
+  "auth": {
+    "loginTitle": "Login to IFC",
+    "signupTitle": "Join IFC",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "role": "Select Role",
+    "farmer": "Farmer",
+    "seller": "Seller/Equipment Owner",
+    "agriOfficer": "Agriculture Officer",
+    "location": "Location",
+    "cropType": "Primary Crop Type",
+    "farmSize": "Farm Size (acres)",
+    "experience": "Experience (years)",
+    "switchToLogin": "Already have an account? Login",
+    "switchToSignup": "Don't have an account? Sign Up",
+    "loginError": "Invalid credentials",
+    "signupSuccess": "Account created successfully!"
+  },
+  "dashboard": {
+    "farmer": {
+      "title": "Farmer Dashboard",
+      "aiAdvisor": "AI Advisor",
+      "marketplace": "Marketplace",
+      "loanCalculator": "Loan Calculator",
+      "queryHistory": "Query History",
+      "notifications": "Notifications",
+      "profile": "Profile",
+      "weather": "Weather Updates",
+      "cropMonitoring": "Crop Monitoring"
+    },
+    "seller": {
+      "title": "Seller Dashboard",
+      "addProduct": "Add Product",
+      "myListings": "My Listings",
+      "salesAnalytics": "Sales Analytics",
+      "orders": "Orders",
+      "inventory": "Inventory"
+    },
+    "admin": {
+      "title": "Admin Dashboard",
+      "escalatedQueries": "Escalated Queries",
+      "userManagement": "User Management",
+      "systemAnalytics": "System Analytics",
+      "contentModeration": "Content Moderation"
+    }
+  },
+  "aiChat": {
+    "placeholder": "Ask me anything about farming...",
+    "voiceInput": "Voice Input",
+    "imageUpload": "Upload Image",
+    "sendMessage": "Send Message",
+    "listening": "Listening...",
+    "processing": "Processing your query...",
+    "escalateToExpert": "Escalate to Expert"
+  },
+  "marketplace": {
+    "title": "Agricultural Marketplace",
+    "categories": "Categories",
+    "filters": "Filters",
+    "priceRange": "Price Range",
+    "location": "Location",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "contactSeller": "Contact Seller",
+    "equipment": "Equipment",
+    "seeds": "Seeds",
+    "fertilizers": "Fertilizers",
+    "pesticides": "Pesticides"
+  },
+  "loanCalculator": {
+    "title": "Agricultural Loan Calculator",
+    "loanAmount": "Loan Amount (₹)",
+    "interestRate": "Interest Rate (%)",
+    "tenure": "Tenure (years)",
+    "monthlyEMI": "Monthly EMI",
+    "totalInterest": "Total Interest",
+    "totalAmount": "Total Amount Payable",
+    "calculate": "Calculate EMI"
+  },
+  "community": {
+    "title": "Farmer Community Forum",
+    "createPost": "Create New Post",
+    "categories": "Categories",
+    "trending": "Trending Topics",
+    "recentPosts": "Recent Posts",
+    "reply": "Reply",
+    "like": "Like",
+    "share": "Share"
+  },
+  "resources": {
+    "title": "Agricultural Resources",
+    "articles": "Articles",
+    "videos": "Videos",
+    "guides": "Guides",
+    "weatherReports": "Weather Reports",
+    "marketPrices": "Market Prices",
+    "governmentSchemes": "Government Schemes"
+  }
+}

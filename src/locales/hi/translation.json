@@ -1,0 +1,128 @@
+{
+  "common": {
+    "login": "लॉगिन",
+    "signup": "साइन अप",
+    "logout": "लॉगआउट",
+    "cancel": "रद्द करें",
+    "save": "सेव करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "search": "खोजें",
+    "loading": "लोड हो रहा है...",
+    "submit": "सबमिट करें",
+    "close": "बंद करें",
+    "back": "वापस",
+    "next": "अगला",
+    "upload": "अपलोड",
+    "download": "डाउनलोड"
+  },
+  "nav": {
+    "home": "होम",
+    "marketplace": "मार्केटप्लेस",
+    "community": "कम्युनिटी",
+    "resources": "संसाधन",
+    "dashboard": "डैशबोर्ड",
+    "profile": "प्रोफाइल"
+  },
+  "auth": {
+    "loginTitle": "IFC में लॉगिन करें",
+    "signupTitle": "IFC में शामिल हों",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "name": "पूरा नाम",
+    "phone": "फोन नंबर",
+    "role": "भूमिका चुनें",
+    "farmer": "किसान",
+    "seller": "विक्रेता/उपकरण मालिक",
+    "agriOfficer": "कृषि अधिकारी",
+    "location": "स्थान",
+    "cropType": "मुख्य फसल प्रकार",
+    "farmSize": "खेत का आकार (एकड़)",
+    "experience": "अनुभव (वर्ष)",
+    "switchToLogin": "पहले से खाता है? लॉगिन करें",
+    "switchToSignup": "खाता नहीं है? साइन अप करें",
+    "loginError": "गलत प्रमाण पत्र",
+    "signupSuccess": "खाता सफलतापूर्वक बनाया गया!"
+  },
+  "dashboard": {
+    "farmer": {
+      "title": "किसान डैशबोर्ड",
+      "aiAdvisor": "AI सलाहकार",
+      "marketplace": "मार्केटप्लेस",
+      "loanCalculator": "लोन कैलकुलेटर",
+      "queryHistory": "क्वेरी इतिहास",
+      "notifications": "सूचनाएं",
+      "profile": "प्रोफाइल",
+      "weather": "मौसम अपडेट",
+      "cropMonitoring": "फसल निगरानी"
+    },
+    "seller": {
+      "title": "विक्रेता डैशबोर्ड",
+      "addProduct": "उत्पाद जोड़ें",
+      "myListings": "मेरी लिस्टिंग",
+      "salesAnalytics": "बिक्री विश्लेषण",
+      "orders": "ऑर्डर",
+      "inventory": "इन्वेंटरी"
+    },
+    "admin": {
+      "title": "एडमिन डैशबोर्ड",
+      "escalatedQueries": "एस्केलेटेड क्वेरीज",
+      "userManagement": "उपयोगकर्ता प्रबंधन",
+      "systemAnalytics": "सिस्टम एनालिटिक्स",
+      "contentModeration": "कंटेंट मॉडरेशन"
+    }
+  },
+  "aiChat": {
+    "placeholder": "खेती के बारे में कुछ भी पूछें...",
+    "voiceInput": "वॉयस इनपुट",
+    "imageUpload": "तस्वीर अपलोड करें",
+    "sendMessage": "संदेश भेजें",
+    "listening": "सुन रहा है...",
+    "processing": "आपकी क्वेरी प्रोसेस कर रहे हैं...",
+    "escalateToExpert": "विशेषज्ञ को एस्केलेट करें"
+  },
+  "marketplace": {
+    "title": "कृषि मार्केटप्लेस",
+    "categories": "श्रेणियां",
+    "filters": "फिल्टर",
+    "priceRange": "मूल्य सीमा",
+    "location": "स्थान",
+    "addToCart": "कार्ट में जोड़ें",
+    "buyNow": "अभी खरीदें",
+    "contactSeller": "विक्रेता से संपर्क करें",
+    "equipment": "उपकरण",
+    "seeds": "बीज",
+    "fertilizers": "उर्वरक",
+    "pesticides": "कीटनाशक"
+  },
+  "loanCalculator": {
+    "title": "कृषि लोन कैलकुलेटर",
+    "loanAmount": "लोन राशि (₹)",
+    "interestRate": "ब्याज दर (%)",
+    "tenure": "अवधि (वर्ष)",
+    "monthlyEMI": "मासिक EMI",
+    "totalInterest": "कुल ब्याज",
+    "totalAmount": "कुल देय राशि",
+    "calculate": "EMI गणना करें"
+  },
+  "community": {
+    "title": "किसान कम्युनिटी फोरम",
+    "createPost": "नई पोस्ट बनाएं",
+    "categories": "श्रेणियां",
+    "trending": "ट्रेंडिंग विषय",
+    "recentPosts": "हाल की पोस्ट",
+    "reply": "जवाब दें",
+    "like": "लाइक",
+    "share": "शेयर करें"
+  },
+  "resources": {
+    "title": "कृषि संसाधन",
+    "articles": "लेख",
+    "videos": "वीडियो",
+    "guides": "गाइड",
+    "weatherReports": "मौसम रिपोर्ट",
+    "marketPrices": "बाजार मूल्य",
+    "governmentSchemes": "सरकारी योजनाएं"
+  }
+}
