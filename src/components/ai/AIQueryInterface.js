@@ -13,15 +13,30 @@ import {
   Bot
 } from 'lucide-react';
 import { toast } from 'react-toastify';
+import SpeechToText from '../SpeechToText';
 
 const AIQueryInterface = ({ onMessageSent, messages = [], isLoading = false }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
   const [uploadedImages, setUploadedImages] = useState([]);
   const [recognition, setRecognition] = useState(null);
+  const [currentLanguage, setCurrentLanguage] = useState('malayalam');
   const messagesEndRef = useRef(null);
   const textareaRef = useRef(null);
+
+  // Map i18n language codes to our speech language codes
+  const languageMap = {
+    'ml': 'malayalam',
+    'en': 'english', 
+    'hi': 'hindi'
+  };
+
+  // Update current language when i18n language changes
+  useEffect(() => {
+    const mappedLang = languageMap[i18n.language] || 'malayalam';
+    setCurrentLanguage(mappedLang);
+  }, [i18n.language]);
 
   // Initialize Speech Recognition
   useEffect(() => {
@@ -349,6 +364,27 @@ const AIQueryInterface = ({ onMessageSent, messages = [], isLoading = false }) =
           }}
           className="hidden"
         />
+        
+        {/* Enhanced Speech-to-Text Component */}
+        <div className="mt-6 border-t border-gray-200 pt-6">
+          <SpeechToText
+            onTranscript={(text, language) => {
+              if (text.trim()) {
+                setInputText(text);
+                // Auto-submit if text is substantial
+                if (text.length > 10) {
+                  setTimeout(() => {
+                    handleSubmit({ preventDefault: () => {} });
+                  }, 1000);
+                }
+              }
+            }}
+            language={currentLanguage}
+            className="mb-4"
+            showSettings={true}
+            autoPreload={true}
+          />
+        </div>
       </div>
     </div>
   );

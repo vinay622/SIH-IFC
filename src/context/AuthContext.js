@@ -28,24 +28,47 @@ export const AuthProvider = ({ children }) => {
   const login = async (credentials) => {
     setIsLoading(true);
     try {
-      // This would be replaced with actual API call
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(credentials),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        setUser(data.user);
+      // MOCK AUTH - Remove this when you have a real backend
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API delay
+      
+      // Mock user data based on email
+      const mockUsers = {
+        'farmer@test.com': { id: 1, name: 'John Farmer', email: 'farmer@test.com', role: 'farmer' },
+        'seller@test.com': { id: 2, name: 'Mary Seller', email: 'seller@test.com', role: 'seller' },
+        'officer@test.com': { id: 3, name: 'Admin Officer', email: 'officer@test.com', role: 'agri_officer' },
+        'admin@test.com': { id: 4, name: 'Super Admin', email: 'admin@test.com', role: 'admin' }
+      };
+      
+      const user = mockUsers[credentials.email.toLowerCase()];
+      
+      if (user && credentials.password === 'password123') {
+        const mockToken = 'mock-jwt-token-' + Date.now();
+        localStorage.setItem('token', mockToken);
+        localStorage.setItem('user', JSON.stringify(user));
+        setUser(user);
         return { success: true };
       } else {
-        return { success: false, error: 'Invalid credentials' };
+        return { success: false, error: 'Invalid credentials. Try: farmer@test.com / password123' };
       }
+      
+      // REAL API CODE (uncomment when you have backend):
+      // const response = await fetch('/api/auth/login', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(credentials),
+      // });
+
+      // if (response.ok) {
+      //   const data = await response.json();
+      //   localStorage.setItem('token', data.token);
+      //   localStorage.setItem('user', JSON.stringify(data.user));
+      //   setUser(data.user);
+      //   return { success: true };
+      // } else {
+      //   return { success: false, error: 'Invalid credentials' };
+      // }
     } catch (error) {
       return { success: false, error: 'Network error' };
     } finally {
@@ -56,25 +79,49 @@ export const AuthProvider = ({ children }) => {
   const signup = async (userData) => {
     setIsLoading(true);
     try {
-      // This would be replaced with actual API call
-      const response = await fetch('/api/auth/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      });
+      // MOCK AUTH - Remove this when you have a real backend
+      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API delay
+      
+      // Create mock user from signup data
+      const newUser = {
+        id: Date.now(),
+        name: userData.name,
+        email: userData.email,
+        role: userData.role,
+        phone: userData.phone,
+        location: userData.location,
+        ...(userData.role === 'farmer' && {
+          cropType: userData.cropType,
+          farmSize: userData.farmSize,
+          experience: userData.experience
+        })
+      };
+      
+      const mockToken = 'mock-jwt-token-' + Date.now();
+      localStorage.setItem('token', mockToken);
+      localStorage.setItem('user', JSON.stringify(newUser));
+      setUser(newUser);
+      return { success: true };
+      
+      // REAL API CODE (uncomment when you have backend):
+      // const response = await fetch('/api/auth/signup', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(userData),
+      // });
 
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        setUser(data.user);
-        return { success: true };
-      } else {
-        const errorData = await response.json();
-        return { success: false, error: errorData.message };
-      }
+      // if (response.ok) {
+      //   const data = await response.json();
+      //   localStorage.setItem('token', data.token);
+      //   localStorage.setItem('user', JSON.stringify(data.user));
+      //   setUser(data.user);
+      //   return { success: true };
+      // } else {
+      //   const errorData = await response.json();
+      //   return { success: false, error: errorData.message };
+      // }
     } catch (error) {
       return { success: false, error: 'Network error' };
     } finally {

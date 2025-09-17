@@ -10,8 +10,10 @@ import {
   Star,
   Grid,
   List,
+  Map,
   Sort
 } from 'lucide-react';
+import MapComponent from '../components/MapComponent';
 
 const Marketplace = () => {
   const { t } = useTranslation();
@@ -22,9 +24,10 @@ const Marketplace = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [priceRange, setPriceRange] = useState([0, 1000000]);
   const [location, setLocation] = useState('');
-  const [viewMode, setViewMode] = useState('grid');
+  const [viewMode, setViewMode] = useState('grid'); // 'grid', 'list', 'map'
   const [sortBy, setSortBy] = useState('newest');
   const [showFilters, setShowFilters] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   // Mock data
   useEffect(() => {
@@ -37,6 +40,7 @@ const Marketplace = () => {
         originalPrice: 900000,
         category: 'Tractors',
         location: 'Kochi, Kerala',
+        coordinates: { lat: 9.9312, lng: 76.2673 },
         seller: {
           name: 'Ravi Kumar',
           phone: '+91 9876543210',
@@ -57,6 +61,7 @@ const Marketplace = () => {
         price: 150,
         category: 'Seeds',
         location: 'Thrissur, Kerala',
+        coordinates: { lat: 10.5276, lng: 76.2144 },
         seller: {
           name: 'Kerala Seeds Co.',
           phone: '+91 9876543211',
@@ -77,6 +82,7 @@ const Marketplace = () => {
         price: 1200,
         category: 'Fertilizers',
         location: 'Palakkad, Kerala',
+        coordinates: { lat: 10.7867, lng: 76.6548 },
         seller: {
           name: 'Agri Solutions',
           phone: '+91 9876543212',
@@ -98,6 +104,7 @@ const Marketplace = () => {
         originalPrice: 28000,
         category: 'Equipment',
         location: 'Ernakulam, Kerala',
+        coordinates: { lat: 10.0261, lng: 76.3134 },
         seller: {
           name: 'Farm Tech Solutions',
           phone: '+91 9876543213',
@@ -391,14 +398,23 @@ const Marketplace = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 ${viewMode === 'grid' ? 'bg-primary-500 text-white' : 'bg-white text-gray-600'}`}
+                  title="Grid View"
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 ${viewMode === 'list' ? 'bg-primary-500 text-white' : 'bg-white text-gray-600'}`}
+                  title="List View"
                 >
                   <List className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewMode('map')}
+                  className={`p-2 ${viewMode === 'map' ? 'bg-primary-500 text-white' : 'bg-white text-gray-600'}`}
+                  title="Map View"
+                >
+                  <Map className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -469,18 +485,27 @@ const Marketplace = () => {
           </p>
         </div>
 
-        {/* Products Grid/List */}
+        {/* Products Grid/List/Map */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        ) : (
+        ) : viewMode === 'list' ? (
           <div className="space-y-4">
             {filteredProducts.map((product) => (
               <ProductListItem key={product.id} product={product} />
             ))}
+          </div>
+        ) : (
+          // Map View
+          <div className="h-96 w-full">
+            <MapComponent
+              products={filteredProducts}
+              onProductSelect={setSelectedProduct}
+              selectedProduct={selectedProduct}
+            />
           </div>
         )}
 
